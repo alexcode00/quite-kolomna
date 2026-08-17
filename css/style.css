@@ -599,7 +599,7 @@ address {
 
 .about__window {
     grid-column: 1 / 4;
-    margin-top: -100px;
+    margin-top: 36px;
 }
 
 .about__window img {
@@ -1515,7 +1515,7 @@ address {
 
     .about__story { grid-column: 1 / 6; }
     .about__courtyard { grid-column: 7 / 13; }
-    .about__window { grid-column: 1 / 4; margin-top: -50px; }
+    .about__window { grid-column: 1 / 4; margin-top: 30px; }
     .about__quote { grid-column: 5 / 11; }
 
     .room-viewer { grid-template-columns: 1.45fr 1fr; }
@@ -1653,7 +1653,7 @@ address {
     .about__story { order: 1; }
     .about__courtyard { width: calc(100% - 34px); margin: 38px 0 0 auto; order: 2; }
     .about__courtyard img { height: 390px; }
-    .about__window { width: 48%; margin: -90px 0 0; order: 3; }
+    .about__window { width: 62%; margin: 24px 0 0; order: 3; }
     .about__window img { height: 280px; }
     .about__quote { padding: 50px 0 0 30px; order: 4; }
     .about__facts dd { font-size: 7px; }
