@@ -338,19 +338,6 @@ address {
     overflow: hidden;
 }
 
-.hero::before {
-    position: absolute;
-    z-index: -1;
-    top: 86px;
-    right: calc((100vw - min(1380px, calc(100vw - 80px))) / 2 + 7%);
-    width: 27vw;
-    max-width: 510px;
-    height: 78%;
-    border-right: 1px solid var(--line);
-    border-left: 1px solid var(--line);
-    content: "";
-}
-
 .hero__grid {
     display: grid;
     width: var(--page);
@@ -1631,7 +1618,6 @@ address {
     .brand__mark { width: 36px; height: 42px; }
 
     .hero { padding: 106px 0 70px; }
-    .hero::before { display: none; }
     .hero__grid { display: flex; min-height: 0; flex-direction: column; gap: 34px; }
     .hero__intro { padding-top: 20px; }
     .hero h1 { font-size: clamp(60px, 21vw, 94px); }
