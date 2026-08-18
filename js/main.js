@@ -123,10 +123,25 @@ bookingForm?.addEventListener('submit', (event) => {
 });
 
 const revealItems = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window) {
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if ('IntersectionObserver' in window && !reduceMotion) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
+
+            const isImage = entry.target.classList.contains('reveal--image');
+            entry.target.animate([
+                {
+                    opacity: 0,
+                    transform: isImage ? 'translateY(24px) scale(.985)' : 'translateY(30px)'
+                },
+                { opacity: 1, transform: 'none' }
+            ], {
+                duration: 800,
+                easing: 'cubic-bezier(.22, .72, .2, 1)',
+                fill: 'both'
+            });
             entry.target.classList.add('is-visible');
             observer.unobserve(entry.target);
         });
